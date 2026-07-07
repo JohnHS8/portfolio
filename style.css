@@ -121,6 +121,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 
 .proj-desc{font-weight:300;font-size:1.1rem;line-height:1.55;max-width:66ch}
 .proj-desc p{margin-bottom:20px}
+.proj-desc .materials{font-style:italic;font-size:.9rem;line-height:1.6;color:var(--ink-dim);margin-top:26px}
 
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin:44px 0}
 .g-cell{aspect-ratio:4/3;background:var(--ph);border:1px solid var(--line);border-radius:6px;position:relative;overflow:hidden}
