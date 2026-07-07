@@ -59,12 +59,12 @@ window.PROGETTI = [
 
   /* ---------- INSTALLAZIONI ---------- */
   {
-    id: "titolo-install-1",
+    id: "mneme",
     cat: "install",
-    title: { it: "Titolo", en: "Title" },
-    meta:  { it: "Anno · Luogo", en: "Year · Venue" },
-    thumb: null,
-    page: false
+    title: { it: "Mnème", en: "Mnème" },
+    meta:  { it: "2018 · Martini Elettrico, Bologna", en: "2018 · Martini Elettrico, Bologna" },
+    thumb: "media/mneme/thumb.jpg",
+    page: true
   },
 
   /* ---------- MUSICA ---------- */
