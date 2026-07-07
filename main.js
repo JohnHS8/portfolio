@@ -64,7 +64,7 @@
     var curLang = function(){ return document.documentElement.lang==='en' ? 'en' : 'it'; };
     var paint = function(){ var q = QUOTES[qi]; qt.textContent = '« '+q[curLang()]+' »'; qb.textContent = q.by; };
     paint();
-    var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var reduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion:reduce)').matches : false;
     if(!reduce){
       setInterval(function(){
         quoteEl.classList.add('fade');
