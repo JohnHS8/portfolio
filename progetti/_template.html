@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ========================================================
+  TEMPLATE PAGINA PROGETTO — come si usa:
+  1. copia questo file e rinominalo con lo slug del progetto
+     (lo stesso "id" usato in progetti.js) → es. nome-opera.html
+  2. sostituisci titolo, meta, testi e crediti
+  3. metti i media in ../media/<id>/ e aggiorna i src qui sotto
+  4. in progetti.js imposta page: true per quel progetto
+======================================================== -->
+<title>Titolo del progetto — Giovanni Magaglio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script>
+  try{ var t = localStorage.getItem('gm-theme');
+    if(!t && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+    if(t) document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+</script>
+</head>
+<body class="page-progetto">
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">Giovanni Magaglio</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="../index.html#works" data-it="Lavori" data-en="Works">Lavori</a>
+        <a href="../index.html#contatti" data-it="Contatti" data-en="Contact">Contatti</a>
+      </div>
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button data-lang="it" aria-pressed="true">IT</button>
+        <button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="theme-toggle" id="themeBtn" aria-label="Tema chiaro o scuro" title="Tema chiaro / scuro">☾</button>
+    </div>
+  </div>
+</nav>
+
+<main class="proj">
+  <div class="wrap">
+    <a class="back" href="../index.html#works" data-it="← Tutti i lavori" data-en="← All works">← Tutti i lavori</a>
+
+    <h1 data-it="Titolo del progetto" data-en="Project title">Titolo del progetto</h1>
+    <p class="proj-meta" data-it="2025 — Luogo · Ruolo" data-en="2025 — Venue · Role">2025 — Luogo · Ruolo</p>
+
+    <!-- Media principale: immagine, video o embed.
+         Immagine: <img src="../media/<id>/hero.jpg" alt="">
+         Vimeo:    <iframe src="https://player.vimeo.com/video/XXXXXX" allowfullscreen></iframe> -->
+    <div class="hero-media"></div>
+
+    <div class="proj-desc">
+      <p data-it="Qui va il testo del progetto: il concept, il contesto della produzione e l'approccio tecnico. Racconta il lavoro con parole tue — uno o più paragrafi." data-en="This is where the project text goes: the concept, the production context and the technical approach. Tell the work in your own words — one or more paragraphs.">Qui va il testo del progetto: il concept, il contesto della produzione e l'approccio tecnico. Racconta il lavoro con parole tue — uno o più paragrafi.</p>
+      <p data-it="Un secondo paragrafo può approfondire il ruolo del suono, della spazializzazione o del video nel lavoro." data-en="A second paragraph can go deeper into the role of sound, spatialisation or video in the work.">Un secondo paragrafo può approfondire il ruolo del suono, della spazializzazione o del video nel lavoro.</p>
+    </div>
+
+    <!-- Galleria: dentro ogni .g-cell metti <img src="../media/<id>/01.jpg" alt="">
+         Elimina le celle che non servono, o l'intera .gallery -->
+    <div class="gallery">
+      <div class="g-cell"></div>
+      <div class="g-cell"></div>
+      <div class="g-cell"></div>
+      <div class="g-cell"></div>
+    </div>
+
+    <dl class="credits">
+      <dt data-it="Anno" data-en="Year">Anno</dt><dd>2025</dd>
+      <dt data-it="Luogo" data-en="Venue">Luogo</dt><dd data-it="Nome del teatro / festival" data-en="Theatre / festival name">Nome del teatro / festival</dd>
+      <dt data-it="Ruolo" data-en="Role">Ruolo</dt><dd data-it="Suono e video design" data-en="Sound and video design">Suono e video design</dd>
+      <dt data-it="Produzione" data-en="Production">Produzione</dt><dd data-it="Ente produttore" data-en="Producing body">Ente produttore</dd>
+      <dt data-it="Video" data-en="Video">Video</dt><dd><a href="#">vimeo.com/…</a></dd>
+    </dl>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-contacts">
+      <div><span>Email</span><a href="mailto:email@esempio.com">email@esempio.com</a></div>
+      <div><span>Instagram</span><a href="#">@giovannimagaglio</a></div>
+      <div><span>Vimeo</span><a href="#">vimeo.com/giovannimagaglio</a></div>
+    </div>
+    <div class="foot-meta">© <span id="year"></span> Giovanni Magaglio · <span data-it="Firenze, IT" data-en="Florence, IT">Firenze, IT</span></div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

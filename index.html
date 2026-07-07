@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giovanni Magaglio — compositore, sound designer, artista intermediale</title>
+<meta name="description" content="Giovanni Magaglio — compositore, sound designer e artista intermediale con base a Firenze. Live A/V, OST, teatro, installazioni, musica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Applica subito il tema salvato per evitare il flash al caricamento */
+  try{ var t = localStorage.getItem('gm-theme');
+    if(!t && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+    if(t) document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Giovanni Magaglio</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#contatti" data-it="Contatti" data-en="Contact">Contatti</a>
+      </div>
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button data-lang="it" aria-pressed="true">IT</button>
+        <button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="theme-toggle" id="themeBtn" aria-label="Tema chiaro o scuro" title="Tema chiaro / scuro">☾</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Per la foto hero: metti il file in media/hero.jpg e aggiungi
+     style="background-image:url('media/hero.jpg')" al tag qui sotto -->
+<header class="hero" id="top">
+  <span class="hero-tag">▫ foto hero</span>
+  <div class="hero-center">
+    <h1>Giovanni Magaglio</h1>
+    <p class="role" data-it="Compositore, sound designer, artista intermediale." data-en="Composer, sound designer, intermedia artist.">Compositore, sound designer, artista intermediale.</p>
+  </div>
+  <blockquote class="hero-quote" id="heroQuote"><span class="q-text"></span><span class="q-by"></span></blockquote>
+</header>
+
+<section class="sec" id="works">
+  <div class="wrap">
+    <div class="cats" id="cats">
+
+      <div class="cat" data-cat="live">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-name">Live A/V</span>
+          <span class="cat-chev" aria-hidden="true">+</span>
+        </button>
+        <div class="cat-panel"><div class="cat-panel-inner">
+          <div class="cat-works" data-cat-grid="live"></div>
+        </div></div>
+      </div>
+
+      <div class="cat" data-cat="ost">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-name" data-it="OST e sound design" data-en="OST &amp; sound design">OST e sound design</span>
+          <span class="cat-chev" aria-hidden="true">+</span>
+        </button>
+        <div class="cat-panel"><div class="cat-panel-inner">
+          <div class="cat-works" data-cat-grid="ost"></div>
+        </div></div>
+      </div>
+
+      <div class="cat" data-cat="teatro">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-name" data-it="Teatro" data-en="Theatre">Teatro</span>
+          <span class="cat-chev" aria-hidden="true">+</span>
+        </button>
+        <div class="cat-panel"><div class="cat-panel-inner">
+          <div class="cat-works" data-cat-grid="teatro"></div>
+        </div></div>
+      </div>
+
+      <div class="cat" data-cat="install">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-name" data-it="Installazioni" data-en="Installations">Installazioni</span>
+          <span class="cat-chev" aria-hidden="true">+</span>
+        </button>
+        <div class="cat-panel"><div class="cat-panel-inner">
+          <div class="cat-works" data-cat-grid="install"></div>
+        </div></div>
+      </div>
+
+      <div class="cat" data-cat="music">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-name" data-it="Musica" data-en="Music">Musica</span>
+          <span class="cat-chev" aria-hidden="true">+</span>
+        </button>
+        <div class="cat-panel"><div class="cat-panel-inner">
+          <div class="cat-works" data-cat-grid="music"></div>
+        </div></div>
+      </div>
+
+      <div class="cat" data-cat="teaching">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-name" data-it="Didattica e ricerca" data-en="Teaching &amp; research">Didattica e ricerca</span>
+          <span class="cat-chev" aria-hidden="true">+</span>
+        </button>
+        <div class="cat-panel"><div class="cat-panel-inner"><div style="padding:6px 4px 40px">
+          <div class="rows">
+            <div class="row">
+              <div class="when" data-it="Firenze" data-en="Florence">Firenze</div>
+              <div>
+                <h3>Conservatorio Luigi Cherubini</h3>
+                <p data-it="Docente di multimedialità, Dipartimento di Musica Elettronica e Scienze del Suono. Corsi fra cui «Composizione Audiovisiva Integrata»." data-en="Lecturer in multimedia, Department of Electronic Music and Sound Sciences. Courses including «Integrated Audiovisual Composition».">Docente di multimedialità, Dipartimento di Musica Elettronica e Scienze del Suono. Corsi fra cui «Composizione Audiovisiva Integrata».</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="when" data-it="Masterclass" data-en="Masterclass">Masterclass</div>
+              <div>
+                <h3 data-it="Scenografia digitale per l'opera" data-en="Digital stage design for opera">Scenografia digitale per l'opera</h3>
+                <p data-it="Masterclass sul pipeline di immagine e video AI e su TouchDesigner come motore scenografico in tempo reale." data-en="Masterclass on the AI image and video pipeline and on TouchDesigner as a real-time scenographic engine.">Masterclass sul pipeline di immagine e video AI e su TouchDesigner come motore scenografico in tempo reale.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="when" data-it="Ricerca" data-en="Research">Ricerca</div>
+              <div>
+                <h3 data-it="Respazializzazione ambisonica di Berio" data-en="Ambisonic respatialisation of Berio">Respazializzazione ambisonica di Berio</h3>
+                <p data-it="Contributo accademico sulla respazializzazione ambisonica di «Thema» e «Visage» di Luciano Berio." data-en="Academic contribution on the ambisonic respatialisation of Berio's «Thema» and «Visage».">Contributo accademico sulla respazializzazione ambisonica di «Thema» e «Visage» di Luciano Berio.</p>
+              </div>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+      <div class="cat" data-cat="bio">
+        <button class="cat-head" aria-expanded="false">
+          <span class="cat-name" data-it="Bio" data-en="Bio">Bio</span>
+          <span class="cat-chev" aria-hidden="true">+</span>
+        </button>
+        <div class="cat-panel"><div class="cat-panel-inner"><div class="bio-pad">
+          <div class="bio-grid">
+            <!-- Per il ritratto: metti il file in media/ritratto.jpg e
+                 inserisci qui dentro <img src="media/ritratto.jpg" alt="Giovanni Magaglio"> -->
+            <div class="portrait" data-label="▫ ritratto"></div>
+            <div class="bio-text">
+              <p class="lead" data-it="Giovanni Magaglio è compositore, sound designer e artista intermediale con base a Firenze." data-en="Giovanni Magaglio is a composer, sound designer and intermedia artist based in Florence.">Giovanni Magaglio è compositore, sound designer e artista intermediale con base a Firenze.</p>
+              <p data-it="La sua pratica attraversa la composizione elettroacustica, la spazializzazione ambisonica e multicanale, il video design e la performance audiovisiva dal vivo. Lavora sul confine fra suono, spazio e immagine in tempo reale, con TouchDesigner come strumento centrale." data-en="His practice spans electroacoustic composition, ambisonic and multichannel spatialisation, video design and live audiovisual performance. He works at the edge of sound, space and real-time image, with TouchDesigner as his central tool.">La sua pratica attraversa la composizione elettroacustica, la spazializzazione ambisonica e multicanale, il video design e la performance audiovisiva dal vivo. Lavora sul confine fra suono, spazio e immagine in tempo reale, con TouchDesigner come strumento centrale.</p>
+              <p data-it="Ha collaborato con istituzioni fra cui Tempo Reale ed è membro del collettivo Frazioni Residue. I suoi lavori sono stati presentati in produzioni operistiche, festival e contesti installativi internazionali, da Mutek Montréal al teatro d'opera." data-en="He has collaborated with institutions including Tempo Reale and is a member of the collective Frazioni Residue. His work has been presented in opera productions, festivals and installation contexts internationally, from Mutek Montréal to the opera house.">Ha collaborato con istituzioni fra cui Tempo Reale ed è membro del collettivo Frazioni Residue. I suoi lavori sono stati presentati in produzioni operistiche, festival e contesti installativi internazionali, da Mutek Montréal al teatro d'opera.</p>
+              <a class="cv-link" href="media/cv-giovanni-magaglio.pdf" data-it="↓ Scarica il CV (PDF)" data-en="↓ Download CV (PDF)">↓ Scarica il CV (PDF)</a>
+            </div>
+          </div>
+        </div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="contatti">
+  <div class="wrap foot-grid">
+    <div class="foot-contacts">
+      <div><span>Email</span><a href="mailto:email@esempio.com">email@esempio.com</a></div>
+      <div><span>Instagram</span><a href="#">@giovannimagaglio</a></div>
+      <div><span>Bandcamp</span><a href="#">giovannimagaglio.bandcamp.com</a></div>
+      <div><span>Vimeo</span><a href="#">vimeo.com/giovannimagaglio</a></div>
+    </div>
+    <div class="foot-meta">© <span id="year"></span> Giovanni Magaglio · <span data-it="Firenze, IT" data-en="Florence, IT">Firenze, IT</span></div>
+  </div>
+</footer>
+
+<script src="progetti.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
