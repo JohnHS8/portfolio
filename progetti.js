@@ -69,12 +69,12 @@ window.PROGETTI = [
 
   /* ---------- MUSICA ---------- */
   {
-    id: "titolo-music-1",
+    id: "semana-humara",
     cat: "music",
-    title: { it: "Titolo", en: "Title" },
-    meta:  { it: "Anno · Etichetta", en: "Year · Label" },
-    thumb: null,
-    page: false
+    title: { it: "Semana Humara", en: "Semana Humara" },
+    meta:  { it: "2021 · StudioVox, Tempo Reale", en: "2021 · StudioVox, Tempo Reale" },
+    thumb: null,  /* TODO: fotogramma dal video → media/semana-humara/thumb.jpg */
+    page: true
   }
 
 ];
