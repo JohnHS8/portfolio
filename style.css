@@ -120,7 +120,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .hero-media img,.hero-media video,.hero-media iframe{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;border:0}
 
 /* Layout a due colonne: testo a sinistra, media+crediti a destra */
-.proj-cols{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;margin-top:6px}
+.proj-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:start;margin-top:6px}
 .proj-side{position:sticky;top:96px}
 .proj-side .hero-media{aspect-ratio:16/9;margin-bottom:28px}
 .proj-side .credits{max-width:none;grid-template-columns:120px 1fr}
