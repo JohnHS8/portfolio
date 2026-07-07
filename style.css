@@ -124,6 +124,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .proj-side{position:sticky;top:96px}
 .proj-side .hero-media{aspect-ratio:16/9;margin-bottom:28px}
 .proj-side .credits{max-width:none;grid-template-columns:120px 1fr}
+.proj-main .gallery{margin:36px 0 0;grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
 @media (max-width:860px){
   .proj-cols{grid-template-columns:1fr;gap:36px}
   .proj-side{position:static}
