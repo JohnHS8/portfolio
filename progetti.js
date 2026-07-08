@@ -10,7 +10,7 @@
 
    Campi:
    id     → slug: nome file della pagina e della cartella media
-   cat    → "live" | "ost" | "teatro" | "install" | "music"
+   cat    → "live" (Live e A/V) | "ost" | "teatro" | "install"
    title  → {it, en}
    meta   → {it, en}  es. "2025 · Teatro del Maggio"
    thumb  → percorso immagine copertina, oppure null (segnaposto)
@@ -19,22 +19,14 @@
 
 window.PROGETTI = [
 
-  /* ---------- LIVE A/V ---------- */
+  /* ---------- LIVE E A/V ---------- */
   {
-    id: "titolo-live-1",
+    id: "semana-humara",
     cat: "live",
-    title: { it: "Titolo", en: "Title" },
-    meta:  { it: "Anno · Luogo", en: "Year · Venue" },
-    thumb: null,
-    page: false
-  },
-  {
-    id: "titolo-live-2",
-    cat: "live",
-    title: { it: "Titolo", en: "Title" },
-    meta:  { it: "Anno · Luogo", en: "Year · Venue" },
-    thumb: null,
-    page: false
+    title: { it: "Semana Humara", en: "Semana Humara" },
+    meta:  { it: "2021 · StudioVox, Tempo Reale", en: "2021 · StudioVox, Tempo Reale" },
+    thumb: "media/semana-humara/thumb.jpg",
+    page: true
   },
 
   /* ---------- OST E SOUND DESIGN ---------- */
@@ -72,16 +64,6 @@ window.PROGETTI = [
     title: { it: "Mnème", en: "Mnème" },
     meta:  { it: "2018 · Martini Elettrico, Bologna", en: "2018 · Martini Elettrico, Bologna" },
     thumb: "media/mneme/thumb.jpg",
-    page: true
-  },
-
-  /* ---------- MUSICA ---------- */
-  {
-    id: "semana-humara",
-    cat: "music",
-    title: { it: "Semana Humara", en: "Semana Humara" },
-    meta:  { it: "2021 · StudioVox, Tempo Reale", en: "2021 · StudioVox, Tempo Reale" },
-    thumb: "media/semana-humara/thumb.jpg",
     page: true
   }
 
