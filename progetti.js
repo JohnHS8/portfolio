@@ -10,7 +10,7 @@
 
    Campi:
    id     → slug: nome file della pagina e della cartella media
-   cat    → "live" (Live e A/V) | "ost" | "teatro" | "install"
+   cat    → "teatro" (Teatro e performance) | "ost" | "install"
    title  → {it, en}
    meta   → {it, en}  es. "2025 · Teatro del Maggio"
    thumb  → percorso immagine copertina, oppure null (segnaposto)
@@ -19,10 +19,10 @@
 
 window.PROGETTI = [
 
-  /* ---------- LIVE E A/V ---------- */
+  /* ---------- TEATRO E PERFORMANCE ---------- */
   {
     id: "semana-humara",
-    cat: "live",
+    cat: "teatro",
     title: { it: "Semana Humara", en: "Semana Humara" },
     meta:  { it: "2021 · StudioVox, Tempo Reale", en: "2021 · StudioVox, Tempo Reale" },
     thumb: "media/semana-humara/thumb.jpg",
@@ -39,7 +39,6 @@ window.PROGETTI = [
     page: true
   },
 
-  /* ---------- TEATRO ---------- */
   {
     id: "log-out",
     cat: "teatro",

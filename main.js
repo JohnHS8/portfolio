@@ -58,7 +58,11 @@
       {it:'Cammina così in silenzio che le piante dei piedi diventino orecchie.', en:'Walk so silently that the bottoms of your feet become ears.', by:'Pauline Oliveros'},
       {it:'Il tubo catodico sostituirà la tela.', en:'The cathode ray tube will replace the canvas.', by:'Nam June Paik'},
       {it:'La ripetizione è una forma di cambiamento.', en:'Repetition is a form of change.', by:'Brian Eno'},
-      {it:'Il medium è il messaggio.', en:'The medium is the message.', by:'Marshall McLuhan'}
+      {it:'Il medium è il messaggio.', en:'The medium is the message.', by:'Marshall McLuhan'},
+      {it:'Mi interessano i processi percepibili.', en:'I am interested in perceptible processes.', by:'Steve Reich'},
+      {it:'La tecnologia è il falò attorno a cui raccontiamo le nostre storie.', en:'Technology is the campfire around which we tell our stories.', by:'Laurie Anderson'},
+      {it:'È molto difficile ascoltare, nel silenzio, gli altri.', en:'It is very difficult to listen, in silence, to others.', by:'Luigi Nono'},
+      {it:'Il suono è il vocabolario della natura.', en:'Sound is the vocabulary of nature.', by:'Pierre Schaeffer'}
     ];
     var qi = 0;
     var curLang = function(){ return document.documentElement.lang==='en' ? 'en' : 'it'; };
@@ -69,7 +73,7 @@
       setInterval(function(){
         quoteEl.classList.add('fade');
         setTimeout(function(){ qi = (qi+1)%QUOTES.length; paint(); quoteEl.classList.remove('fade'); }, 500);
-      }, 5200);
+      }, 9000);
     }
     langBtns.forEach(function(b){ b.addEventListener('click', function(){ setTimeout(paint,0); }); });
   }
