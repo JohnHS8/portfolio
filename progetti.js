@@ -49,15 +49,23 @@ window.PROGETTI = [
 
   /* ---------- TEATRO ---------- */
   {
-    id: "titolo-teatro-1",
+    id: "log-out",
     cat: "teatro",
-    title: { it: "Titolo", en: "Title" },
-    meta:  { it: "Anno · Luogo", en: "Year · Venue" },
-    thumb: null,
-    page: false
+    title: { it: "Log Out", en: "Log Out" },
+    meta:  { it: "2018 · Tempo Reale / The Factory prd", en: "2018 · Tempo Reale / The Factory prd" },
+    thumb: "media/log-out/thumb.jpg",
+    page: true
   },
 
   /* ---------- INSTALLAZIONI ---------- */
+  {
+    id: "four-seats",
+    cat: "install",
+    title: { it: "Four Seats", en: "Four Seats" },
+    meta:  { it: "2021 · ADI Design Museum, Milano", en: "2021 · ADI Design Museum, Milan" },
+    thumb: "media/four-seats/thumb.jpg",
+    page: true
+  },
   {
     id: "mneme",
     cat: "install",
