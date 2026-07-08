@@ -39,12 +39,12 @@ window.PROGETTI = [
 
   /* ---------- OST E SOUND DESIGN ---------- */
   {
-    id: "titolo-ost-1",
+    id: "apnea",
     cat: "ost",
-    title: { it: "Titolo", en: "Title" },
-    meta:  { it: "Anno · Luogo", en: "Year · Venue" },
-    thumb: null,
-    page: false
+    title: { it: "Apnea", en: "Apnea" },
+    meta:  { it: "2023/2024 · Film documentario d'animazione", en: "2023/2024 · Animated documentary film" },
+    thumb: "media/apnea/thumb.jpg",
+    page: true
   },
 
   /* ---------- TEATRO ---------- */
