@@ -83,6 +83,16 @@
   if(tabsBox){
     var tabs = tabsBox.querySelectorAll('.tab');
     var panels = { works: document.getElementById('panel-works'), teaching: document.getElementById('panel-teaching'), bio: document.getElementById('panel-bio') };
+    var menuBtn = document.getElementById('tabMenuBtn');
+    var curTab = document.getElementById('curTab');
+    function syncCur(){
+      if(!curTab) return;
+      var act = tabsBox.querySelector('.tab.active');
+      var src = act.querySelector('.t-full') || act;
+      curTab.setAttribute('data-it', src.getAttribute('data-it') || src.textContent);
+      curTab.setAttribute('data-en', src.getAttribute('data-en') || src.textContent);
+      curTab.textContent = curTab.getAttribute('data-' + (document.documentElement.lang==='en' ? 'en' : 'it'));
+    }
     tabs.forEach(function(tab){
       tab.addEventListener('click', function(){
         tabs.forEach(function(t){ t.classList.remove('active'); });
@@ -97,8 +107,18 @@
             wk.hidden = (cat !== 'all' && wk.getAttribute('data-cat') !== cat);
           });
         }
+        tabsBox.classList.remove('open');
+        if(menuBtn) menuBtn.setAttribute('aria-expanded','false');
+        syncCur();
       });
     });
+    if(menuBtn){
+      menuBtn.addEventListener('click', function(){
+        var open = tabsBox.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    syncCur();
   }
 
   /* ---- Fisarmonica: una voce aperta alla volta (solo home) ---- */
