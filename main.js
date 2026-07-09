@@ -78,6 +78,29 @@
     langBtns.forEach(function(b){ b.addEventListener('click', function(){ setTimeout(paint,0); }); });
   }
 
+  /* ---- Tab categorie (solo home) ---- */
+  var tabsBox = document.getElementById('worksTabs');
+  if(tabsBox){
+    var tabs = tabsBox.querySelectorAll('.tab');
+    var panels = { works: document.getElementById('panel-works'), teaching: document.getElementById('panel-teaching'), bio: document.getElementById('panel-bio') };
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        tabs.forEach(function(t){ t.classList.remove('active'); });
+        tab.classList.add('active');
+        var cat = tab.getAttribute('data-cat');
+        var panel = tab.getAttribute('data-panel');
+        panels.works.hidden = !cat;
+        panels.teaching.hidden = panel !== 'teaching';
+        panels.bio.hidden = panel !== 'bio';
+        if(cat){
+          document.querySelectorAll('#worksGrid .wk').forEach(function(wk){
+            wk.hidden = (cat !== 'all' && wk.getAttribute('data-cat') !== cat);
+          });
+        }
+      });
+    });
+  }
+
   /* ---- Fisarmonica: una voce aperta alla volta (solo home) ---- */
   var cats = document.querySelectorAll('#cats .cat');
   cats.forEach(function(cat){

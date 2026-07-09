@@ -68,47 +68,56 @@ window.PROGETTI = [
 
 ];
 
-/* ---- Rendering griglie home (non toccare) ---- */
+/* ---- Rendering griglia home (non toccare) ---- */
 (function(){
   'use strict';
-  var containers = document.querySelectorAll('[data-cat-grid]');
-  if(!containers.length || !window.PROGETTI) return;
+  var grid = document.getElementById('worksGrid');
+  if(!grid || !window.PROGETTI) return;
 
-  containers.forEach(function(box){
-    var cat = box.getAttribute('data-cat-grid');
-    var works = window.PROGETTI.filter(function(p){ return p.cat === cat; });
+  var CAT_LABELS = {
+    teatro:  { it:'Teatro e performance', en:'Theatre & performance' },
+    install: { it:'Sound art e installazioni', en:'Sound art & installations' },
+    ost:     { it:'OST e sound design', en:'OST & sound design' }
+  };
 
-    works.forEach(function(p){
-      var a = document.createElement('a');
-      a.className = 'wk';
-      if(p.page) a.href = 'progetti/' + p.id + '.html';
+  window.PROGETTI.forEach(function(p){
+    var a = document.createElement('a');
+    a.className = 'wk';
+    a.setAttribute('data-cat', p.cat);
+    if(p.page) a.href = 'progetti/' + p.id + '.html';
 
-      var thumb = document.createElement('div');
-      thumb.className = 'wk-thumb';
-      if(p.thumb){
-        var img = document.createElement('img');
-        img.src = p.thumb;
-        img.alt = p.title.it;
-        img.loading = 'lazy';
-        thumb.appendChild(img);
-      } else {
-        thumb.setAttribute('data-label','▫ immagine');
-      }
+    var thumb = document.createElement('div');
+    thumb.className = 'wk-thumb';
+    if(p.thumb){
+      var img = document.createElement('img');
+      img.src = p.thumb;
+      img.alt = p.title.it;
+      img.loading = 'lazy';
+      thumb.appendChild(img);
+    } else {
+      thumb.setAttribute('data-label','▫ immagine');
+    }
 
-      var h3 = document.createElement('h3');
-      h3.className = 'wk-title';
-      h3.setAttribute('data-it', p.title.it);
-      h3.setAttribute('data-en', p.title.en);
-      h3.textContent = p.title.it;
+    var cat = document.createElement('p');
+    cat.className = 'wk-cat';
+    var lbl = CAT_LABELS[p.cat] || { it:p.cat, en:p.cat };
+    cat.setAttribute('data-it', lbl.it);
+    cat.setAttribute('data-en', lbl.en);
+    cat.textContent = lbl.it;
 
-      var meta = document.createElement('p');
-      meta.className = 'wk-meta';
-      meta.setAttribute('data-it', p.meta.it);
-      meta.setAttribute('data-en', p.meta.en);
-      meta.textContent = p.meta.it;
+    var h3 = document.createElement('h3');
+    h3.className = 'wk-title';
+    h3.setAttribute('data-it', p.title.it);
+    h3.setAttribute('data-en', p.title.en);
+    h3.textContent = p.title.it;
 
-      a.appendChild(thumb); a.appendChild(h3); a.appendChild(meta);
-      box.appendChild(a);
-    });
+    var meta = document.createElement('p');
+    meta.className = 'wk-meta';
+    meta.setAttribute('data-it', p.meta.it);
+    meta.setAttribute('data-en', p.meta.en);
+    meta.textContent = p.meta.it;
+
+    a.appendChild(thumb); a.appendChild(cat); a.appendChild(h3); a.appendChild(meta);
+    grid.appendChild(a);
   });
 })();

@@ -56,6 +56,15 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .sec-head{margin-bottom:36px}
 .sec-head h2{font-weight:700;font-size:clamp(1.2rem,2.4vw,1.6rem);text-transform:uppercase;letter-spacing:.05em}
 
+/* ---------- TAB CATEGORIE ---------- */
+.tabs{display:flex;flex-wrap:wrap;gap:4px 6px;border-bottom:1px solid var(--line);margin-bottom:38px}
+.tab{background:none;border:0;cursor:pointer;font:inherit;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);padding:12px 14px;margin-bottom:-1px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.tab-panel[hidden]{display:none}
+.wk[hidden]{display:none}
+.wk-cat{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-dim);margin:0 0 4px}
+
 /* ---------- FISARMONICA ---------- */
 .cats{border-top:1px solid var(--line)}
 .cat{border-bottom:1px solid var(--line)}

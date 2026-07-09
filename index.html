@@ -45,44 +45,22 @@
 
 <section class="sec" id="works">
   <div class="wrap">
-    <div class="cats" id="cats">
 
-      <div class="cat" data-cat="teatro">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-name" data-it="Teatro e performance" data-en="Theatre &amp; performance">Teatro e performance</span>
-          <span class="cat-chev" aria-hidden="true">+</span>
-        </button>
-        <div class="cat-panel"><div class="cat-panel-inner">
-          <div class="cat-works" data-cat-grid="teatro"></div>
-        </div></div>
-      </div>
+    <div class="tabs" id="worksTabs" role="tablist">
+      <button class="tab active" data-cat="all" data-it="Tutti" data-en="All">Tutti</button>
+      <button class="tab" data-cat="teatro" data-it="Teatro e performance" data-en="Theatre &amp; performance">Teatro e performance</button>
+      <button class="tab" data-cat="install" data-it="Sound art e installazioni" data-en="Sound art &amp; installations">Sound art e installazioni</button>
+      <button class="tab" data-cat="ost" data-it="OST e sound design" data-en="OST &amp; sound design">OST e sound design</button>
+      <button class="tab" data-panel="teaching" data-it="Didattica e ricerca" data-en="Teaching &amp; research">Didattica e ricerca</button>
+      <button class="tab" data-panel="bio">Bio</button>
+    </div>
 
-      <div class="cat" data-cat="install">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-name" data-it="Sound art e installazioni" data-en="Sound art &amp; installations">Sound art e installazioni</span>
-          <span class="cat-chev" aria-hidden="true">+</span>
-        </button>
-        <div class="cat-panel"><div class="cat-panel-inner">
-          <div class="cat-works" data-cat-grid="install"></div>
-        </div></div>
-      </div>
+    <div class="tab-panel" id="panel-works">
+      <div class="cat-works" id="worksGrid"></div>
+    </div>
 
-      <div class="cat" data-cat="ost">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-name" data-it="OST e sound design" data-en="OST &amp; sound design">OST e sound design</span>
-          <span class="cat-chev" aria-hidden="true">+</span>
-        </button>
-        <div class="cat-panel"><div class="cat-panel-inner">
-          <div class="cat-works" data-cat-grid="ost"></div>
-        </div></div>
-      </div>
-
-      <div class="cat" data-cat="teaching">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-name" data-it="Didattica e ricerca" data-en="Teaching &amp; research">Didattica e ricerca</span>
-          <span class="cat-chev" aria-hidden="true">+</span>
-        </button>
-        <div class="cat-panel"><div class="cat-panel-inner"><div style="padding:6px 4px 40px">
+    <div class="tab-panel" id="panel-teaching" hidden>
+      <div style="padding:6px 4px 40px">
           <div class="rows">
             <div class="row">
               <div class="when" data-it="Firenze" data-en="Florence">Firenze</div>
@@ -106,15 +84,11 @@
               </div>
             </div>
           </div>
-        </div></div></div>
       </div>
+    </div>
 
-      <div class="cat" data-cat="bio">
-        <button class="cat-head" aria-expanded="false">
-          <span class="cat-name" data-it="Bio" data-en="Bio">Bio</span>
-          <span class="cat-chev" aria-hidden="true">+</span>
-        </button>
-        <div class="cat-panel"><div class="cat-panel-inner"><div class="bio-pad">
+    <div class="tab-panel" id="panel-bio" hidden>
+      <div class="bio-pad">
           <div class="bio-grid">
             <div class="portrait"><img src="media/ritratto.jpg" alt="Giovanni Magaglio, ritratto"></div>
             <div class="bio-text">
@@ -124,10 +98,9 @@
               <a class="cv-link" href="media/cv-giovanni-magaglio.pdf" data-it="↓ Scarica il CV (PDF)" data-en="↓ Download CV (PDF)">↓ Scarica il CV (PDF)</a>
             </div>
           </div>
-        </div></div></div>
       </div>
-
     </div>
+
   </div>
 </section>
 
