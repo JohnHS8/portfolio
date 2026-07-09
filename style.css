@@ -64,10 +64,13 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .tab-panel[hidden]{display:none}
 .wk[hidden]{display:none}
 .wk-cat{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-dim);margin:0 0 4px}
-@media (max-width:700px){
+.tab .t-short{display:none}
+@media (max-width:860px){
   .tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .tabs::-webkit-scrollbar{display:none}
   .tab{white-space:nowrap;flex:0 0 auto;padding:12px 10px}
+  .tab .t-full{display:none}
+  .tab .t-short{display:inline}
 }
 
 /* ---------- FISARMONICA ---------- */
