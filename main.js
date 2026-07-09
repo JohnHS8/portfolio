@@ -120,6 +120,20 @@
       });
     }
     syncCur();
+
+    /* Nav dell'hero: seleziona il tab corrispondente e scorre ai lavori */
+    document.querySelectorAll('.hero-nav a').forEach(function(link){
+      link.addEventListener('click', function(){
+        var cat = link.getAttribute('data-tab-cat');
+        var panel = link.getAttribute('data-tab-panel');
+        var target = null;
+        tabs.forEach(function(t){
+          if(cat && t.getAttribute('data-cat') === cat) target = t;
+          if(panel && t.getAttribute('data-panel') === panel) target = t;
+        });
+        if(target) target.click();
+      });
+    });
   }
 
   /* ---- Fisarmonica: una voce aperta alla volta (solo home) ---- */

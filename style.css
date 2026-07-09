@@ -9,6 +9,7 @@
   --line:#D4D8D1;--line-2:#C2C7BF;--accent:#A66A18;--accent-dim:#8A6A34;
   --nav-bg:rgba(233,235,230,.85);--ph:#E4E6E0;
   --font-display:"Lato",sans-serif;--font-body:"Lato",sans-serif;
+  --font-mono:"IBM Plex Mono","Courier New",monospace;
   --maxw:1240px;
 }
 [data-theme="dark"]{
@@ -47,9 +48,16 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .hero-center{position:relative;z-index:2;text-align:center;padding:0 32px;max-width:var(--maxw)}
 .hero h1{font-weight:300;font-size:clamp(1.35rem,2.8vw,2.2rem);line-height:1.15;letter-spacing:.07em;text-transform:uppercase;color:#fff}
 .hero .role{margin:12px auto 0;font-weight:300;font-size:clamp(.85rem,1.1vw,1rem);letter-spacing:.01em;color:rgba(255,255,255,.82);max-width:42ch}
-.hero-quote{position:absolute;z-index:2;right:32px;bottom:34px;max-width:32ch;text-align:right;color:rgba(255,255,255,.85);font-weight:300;font-style:italic;font-size:clamp(.8rem,1vw,.95rem);line-height:1.4;opacity:1;transition:opacity .5s ease}
+.hero-quote{position:absolute;z-index:2;right:32px;bottom:68px;max-width:32ch;text-align:right;color:rgba(255,255,255,.85);font-weight:300;font-style:italic;font-size:clamp(.8rem,1vw,.95rem);line-height:1.4;opacity:1;transition:opacity .5s ease}
 .hero-quote.fade{opacity:0}
 .hero-quote .q-by{display:block;margin-top:6px;font-style:normal;font-weight:400;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+/* Nav sezioni sul fondo dell'hero, voci unite da una linea sottile */
+.hero-nav{position:absolute;top:auto;left:0;right:0;bottom:0;z-index:2;background:none;backdrop-filter:none;border:0;display:flex;align-items:center;gap:16px;padding:20px 32px;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.hero-nav a{color:rgba(255,255,255,.72);white-space:nowrap;transition:color .18s}
+.hero-nav a:hover{color:#fff}
+.hero-nav .ln{flex:1;height:1px;min-width:14px;background:rgba(255,255,255,.28)}
+@media (max-width:860px){.hero-nav{display:none}}
 
 /* ---------- SEZIONI ---------- */
 .sec{padding:88px 0;border-bottom:1px solid var(--line)}
@@ -58,15 +66,15 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 
 /* ---------- TAB CATEGORIE ---------- */
 .tabs{display:flex;flex-wrap:wrap;gap:4px 6px;border-bottom:1px solid var(--line);margin-bottom:38px}
-.tab{background:none;border:0;cursor:pointer;font:inherit;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);padding:12px 14px;margin-bottom:-1px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s}
+.tab{background:none;border:0;cursor:pointer;font:inherit;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);padding:12px 14px;margin-bottom:-1px;border-bottom:2px solid transparent;transition:color .18s,border-color .18s}
 .tab:hover{color:var(--ink)}
 .tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
 .tab-panel[hidden]{display:none}
 .wk[hidden]{display:none}
-.wk-cat{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-dim);margin:0 0 4px}
+.wk-cat{font-family:var(--font-mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-dim);margin:0 0 4px}
 .tab .t-short{display:none}
 .tabs-mob{display:none;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:26px}
-#curTab{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700;padding:12px 4px;border-bottom:2px solid var(--accent);margin-bottom:-1px}
+#curTab{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700;padding:12px 4px;border-bottom:2px solid var(--accent);margin-bottom:-1px}
 #tabMenuBtn{background:none;border:0;font:inherit;font-size:19px;line-height:1;padding:10px 4px 12px;margin-bottom:-1px;color:var(--ink-dim);cursor:pointer;border-bottom:2px solid transparent;transition:color .16s,border-color .16s}
 #tabMenuBtn.open,#tabMenuBtn:hover{color:var(--accent);border-bottom-color:var(--accent)}
 @media (max-width:860px){
@@ -134,7 +142,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .back{display:inline-flex;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-dim);margin-bottom:34px;transition:color .16s}
 .back:hover{color:var(--accent)}
 .proj h1{font-weight:300;font-size:clamp(1.8rem,4vw,3rem);text-transform:uppercase;letter-spacing:.03em;line-height:1.04;margin-bottom:14px}
-.proj-meta{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-dim);margin-bottom:34px}
+.proj-meta{font-family:var(--font-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent-dim);margin-bottom:34px}
 
 .hero-media{aspect-ratio:16/9;background:var(--ph);border:1px solid var(--line);border-radius:8px;position:relative;margin-bottom:40px;overflow:hidden}
 .hero-media::after{content:"▷ media principale (immagine o video)";position:absolute;left:16px;bottom:13px;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim)}
@@ -161,7 +169,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .g-cell img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
 
 .credits{border-top:1px solid var(--line);padding-top:26px;display:grid;grid-template-columns:170px 1fr;gap:10px 26px;max-width:640px;font-size:.92rem}
-.credits dt{color:var(--accent-dim);text-transform:uppercase;letter-spacing:.05em;font-size:11px;padding-top:2px}
+.credits dt{font-family:var(--font-mono);color:var(--accent-dim);text-transform:uppercase;letter-spacing:.03em;font-size:10.5px;padding-top:2px}
 .credits dd{color:var(--ink-dim)}
 .credits dd a{color:var(--ink-dim);border-bottom:1px solid var(--line-2);transition:color .16s}
 .credits dd a:hover{color:var(--accent)}
@@ -174,7 +182,7 @@ body.page-progetto footer{border-top:1px solid var(--line);padding-top:52px}
 .foot-contacts div span{color:var(--accent-dim);text-transform:uppercase;letter-spacing:.05em;font-size:11px;display:inline-block;min-width:82px}
 .foot-contacts a{color:var(--ink);transition:color .18s}
 .foot-contacts a:hover{color:var(--accent)}
-.foot-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-dim)}
+.foot-meta{font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-dim)}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:860px){
