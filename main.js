@@ -108,7 +108,7 @@
           });
         }
         tabsBox.classList.remove('open');
-        if(menuBtn) menuBtn.setAttribute('aria-expanded','false');
+        if(menuBtn){ menuBtn.setAttribute('aria-expanded','false'); menuBtn.classList.remove('open'); }
         syncCur();
       });
     });
@@ -116,6 +116,7 @@
       menuBtn.addEventListener('click', function(){
         var open = tabsBox.classList.toggle('open');
         menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        menuBtn.classList.toggle('open', open);
       });
     }
     syncCur();

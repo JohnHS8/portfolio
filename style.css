@@ -67,8 +67,8 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 .tab .t-short{display:none}
 .tabs-mob{display:none;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:26px}
 #curTab{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700;padding:12px 4px;border-bottom:2px solid var(--accent);margin-bottom:-1px}
-#tabMenuBtn{background:none;border:1px solid var(--line-2);border-radius:999px;padding:7px 14px;font:inherit;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim);cursor:pointer;transition:all .16s}
-#tabMenuBtn:hover{color:var(--ink);border-color:var(--ink-dim)}
+#tabMenuBtn{background:none;border:0;font:inherit;font-size:19px;line-height:1;padding:10px 4px 12px;margin-bottom:-1px;color:var(--ink-dim);cursor:pointer;border-bottom:2px solid transparent;transition:color .16s,border-color .16s}
+#tabMenuBtn.open,#tabMenuBtn:hover{color:var(--accent);border-bottom-color:var(--accent)}
 @media (max-width:860px){
   .tabs{display:none}
   .tabs-mob{display:flex}
