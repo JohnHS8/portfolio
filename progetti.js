@@ -10,6 +10,7 @@
 
    Campi:
    id     → slug: nome file della pagina e della cartella media
+   anno   → numero, usato per ordinare (più recente prima)
    cat    → "teatro" (Teatro e performance) | "ost" | "install"
    title  → {it, en}
    meta   → {it, en}  es. "2025 · Teatro del Maggio"
@@ -22,6 +23,7 @@ window.PROGETTI = [
   /* ---------- TEATRO E PERFORMANCE ---------- */
   {
     id: "semana-humara",
+    anno: 2021,
     cat: "teatro",
     title: { it: "Semana Humara", en: "Semana Humara" },
     meta:  { it: "2021 · StudioVox, Tempo Reale", en: "2021 · StudioVox, Tempo Reale" },
@@ -32,6 +34,7 @@ window.PROGETTI = [
   /* ---------- OST E SOUND DESIGN ---------- */
   {
     id: "apnea",
+    anno: 2024,
     cat: "ost",
     title: { it: "Apnea", en: "Apnea" },
     meta:  { it: "2023/2024 · Film documentario d'animazione", en: "2023/2024 · Animated documentary film" },
@@ -41,6 +44,7 @@ window.PROGETTI = [
 
   {
     id: "log-out",
+    anno: 2018,
     cat: "teatro",
     title: { it: "Log Out", en: "Log Out" },
     meta:  { it: "2018 · Tempo Reale / The Factory prd", en: "2018 · Tempo Reale / The Factory prd" },
@@ -51,6 +55,7 @@ window.PROGETTI = [
   /* ---------- INSTALLAZIONI ---------- */
   {
     id: "four-seats",
+    anno: 2021,
     cat: "install",
     title: { it: "Four Seats", en: "Four Seats" },
     meta:  { it: "2021 · ADI Design Museum, Milano", en: "2021 · ADI Design Museum, Milan" },
@@ -59,6 +64,7 @@ window.PROGETTI = [
   },
   {
     id: "mneme",
+    anno: 2018,
     cat: "install",
     title: { it: "Mnème", en: "Mnème" },
     meta:  { it: "2018 · Martini Elettrico, Bologna", en: "2018 · Martini Elettrico, Bologna" },
@@ -80,12 +86,10 @@ window.PROGETTI = [
     ost:     { it:'OST e sound design', en:'OST & sound design' }
   };
 
-  /* Ordine casuale a ogni caricamento (Fisher-Yates su una copia) */
-  var lista = window.PROGETTI.slice();
-  for(var i = lista.length - 1; i > 0; i--){
-    var j = Math.floor(Math.random() * (i + 1));
-    var tmp = lista[i]; lista[i] = lista[j]; lista[j] = tmp;
-  }
+  /* Ordine cronologico: il più recente prima */
+  var lista = window.PROGETTI.slice().sort(function(a, b){
+    return (b.anno || 0) - (a.anno || 0);
+  });
 
   lista.forEach(function(p){
     var a = document.createElement('a');
