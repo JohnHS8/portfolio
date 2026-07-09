@@ -95,6 +95,7 @@
     }
     tabs.forEach(function(tab){
       tab.addEventListener('click', function(){
+        var fromMenu = tabsBox.classList.contains('open');
         tabs.forEach(function(t){ t.classList.remove('active'); });
         tab.classList.add('active');
         var cat = tab.getAttribute('data-cat');
@@ -110,6 +111,10 @@
         tabsBox.classList.remove('open');
         if(menuBtn){ menuBtn.setAttribute('aria-expanded','false'); menuBtn.classList.remove('open'); }
         syncCur();
+        if(fromMenu){
+          var works = document.getElementById('works');
+          if(works) works.scrollIntoView({behavior:'smooth'});
+        }
       });
     });
     if(menuBtn){

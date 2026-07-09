@@ -49,24 +49,23 @@
     <a href="#works" data-tab-panel="teaching" data-it="Didattica" data-en="Teaching">Didattica</a><span class="ln" aria-hidden="true"></span>
     <a href="#works" data-tab-panel="bio">Bio</a>
   </nav>
+  <div class="tabs-mob">
+    <button id="tabMenuBtn" aria-expanded="false" aria-controls="worksTabs" aria-label="Sezioni / Sections">☰</button>
+    <span class="ln" aria-hidden="true"></span>
+    <span id="curTab" data-it="Tutti" data-en="All">Tutti</span>
+  </div>
+  <div class="tabs" id="worksTabs" role="tablist">
+    <button class="tab active" data-cat="all" data-it="Tutti" data-en="All">Tutti</button>
+    <button class="tab" data-cat="teatro"><span class="t-full" data-it="Teatro e performance" data-en="Theatre &amp; performance">Teatro e performance</span><span class="t-short" data-it="Teatro" data-en="Theatre">Teatro</span></button>
+    <button class="tab" data-cat="install"><span class="t-full" data-it="Sound art e installazioni" data-en="Sound art &amp; installations">Sound art e installazioni</span><span class="t-short" data-it="Sound art" data-en="Sound art">Sound art</span></button>
+    <button class="tab" data-cat="ost"><span class="t-full" data-it="OST e sound design" data-en="OST &amp; sound design">OST e sound design</span><span class="t-short">OST</span></button>
+    <button class="tab" data-panel="teaching"><span class="t-full" data-it="Didattica e ricerca" data-en="Teaching &amp; research">Didattica e ricerca</span><span class="t-short" data-it="Didattica" data-en="Teaching">Didattica</span></button>
+    <button class="tab" data-panel="bio">Bio</button>
+  </div>
 </header>
 
 <section class="sec" id="works">
   <div class="wrap">
-
-    <div class="tabs-mob">
-      <button id="tabMenuBtn" aria-expanded="false" aria-controls="worksTabs" aria-label="Sezioni / Sections">☰</button>
-      <span id="curTab" data-it="Tutti" data-en="All">Tutti</span>
-    </div>
-
-    <div class="tabs" id="worksTabs" role="tablist">
-      <button class="tab active" data-cat="all" data-it="Tutti" data-en="All">Tutti</button>
-      <button class="tab" data-cat="teatro"><span class="t-full" data-it="Teatro e performance" data-en="Theatre &amp; performance">Teatro e performance</span><span class="t-short" data-it="Teatro" data-en="Theatre">Teatro</span></button>
-      <button class="tab" data-cat="install"><span class="t-full" data-it="Sound art e installazioni" data-en="Sound art &amp; installations">Sound art e installazioni</span><span class="t-short" data-it="Sound art" data-en="Sound art">Sound art</span></button>
-      <button class="tab" data-cat="ost"><span class="t-full" data-it="OST e sound design" data-en="OST &amp; sound design">OST e sound design</span><span class="t-short">OST</span></button>
-      <button class="tab" data-panel="teaching"><span class="t-full" data-it="Didattica e ricerca" data-en="Teaching &amp; research">Didattica e ricerca</span><span class="t-short" data-it="Didattica" data-en="Teaching">Didattica</span></button>
-      <button class="tab" data-panel="bio">Bio</button>
-    </div>
 
     <div class="tab-panel" id="panel-works">
       <div class="cat-works" id="worksGrid"></div>
