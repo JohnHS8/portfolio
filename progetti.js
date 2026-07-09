@@ -80,7 +80,14 @@ window.PROGETTI = [
     ost:     { it:'OST e sound design', en:'OST & sound design' }
   };
 
-  window.PROGETTI.forEach(function(p){
+  /* Ordine casuale a ogni caricamento (Fisher-Yates su una copia) */
+  var lista = window.PROGETTI.slice();
+  for(var i = lista.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = lista[i]; lista[i] = lista[j]; lista[j] = tmp;
+  }
+
+  lista.forEach(function(p){
     var a = document.createElement('a');
     a.className = 'wk';
     a.setAttribute('data-cat', p.cat);
