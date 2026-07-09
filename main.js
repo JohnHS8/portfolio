@@ -111,6 +111,7 @@
         tabsBox.classList.remove('open');
         if(menuBtn){ menuBtn.setAttribute('aria-expanded','false'); menuBtn.classList.remove('open'); }
         syncCur();
+        if(typeof syncHeroNav === 'function') syncHeroNav();
         if(fromMenu){
           var works = document.getElementById('works');
           if(works) works.scrollIntoView({behavior:'smooth'});
@@ -126,30 +127,48 @@
     }
     syncCur();
 
-    /* Barra mobile: si aggancia sotto la testata quando l'hero esce dallo schermo */
+    /* Barre sull'hero (mobile e desktop): si agganciano sotto la testata
+       quando l'hero esce dallo schermo */
     var mobBar = document.querySelector('.tabs-mob');
+    var heroNav = document.querySelector('.hero-nav');
     var heroEl = document.querySelector('.hero');
     var siteNav = document.querySelector('nav');
-    if(mobBar && heroEl && siteNav){
+    if(heroEl && siteNav){
       var onScroll = function(){
-        if(getComputedStyle(mobBar).display === 'none'){ mobBar.classList.remove('stuck'); return; }
         var navH = siteNav.offsetHeight;
         document.documentElement.style.setProperty('--nav-h', navH + 'px');
         var heroBottom = heroEl.getBoundingClientRect().bottom;
-        var wasStuck = mobBar.classList.contains('stuck');
         var stuck = heroBottom - 50 < navH;
-        if(stuck !== wasStuck){
-          mobBar.classList.toggle('stuck', stuck);
-          if(!stuck && tabsBox.classList.contains('open')){
-            tabsBox.classList.remove('open');
-            if(menuBtn){ menuBtn.setAttribute('aria-expanded','false'); menuBtn.classList.remove('open'); }
+        [mobBar, heroNav].forEach(function(bar){
+          if(!bar) return;
+          if(getComputedStyle(bar).display === 'none' && !bar.classList.contains('stuck')) return;
+          var wasStuck = bar.classList.contains('stuck');
+          if(stuck !== wasStuck){
+            bar.classList.toggle('stuck', stuck);
+            if(!stuck && bar === mobBar && tabsBox.classList.contains('open')){
+              tabsBox.classList.remove('open');
+              if(menuBtn){ menuBtn.setAttribute('aria-expanded','false'); menuBtn.classList.remove('open'); }
+            }
           }
-        }
+        });
       };
       window.addEventListener('scroll', onScroll, {passive:true});
       window.addEventListener('resize', onScroll, {passive:true});
       onScroll();
     }
+
+    /* Evidenzia nella nav dell'hero la sezione attiva */
+    function syncHeroNav(){
+      var act = tabsBox.querySelector('.tab.active');
+      var cat = act.getAttribute('data-cat');
+      var panel = act.getAttribute('data-panel');
+      document.querySelectorAll('.hero-nav a').forEach(function(link){
+        var match = (cat && link.getAttribute('data-tab-cat') === cat) ||
+                    (panel && link.getAttribute('data-tab-panel') === panel);
+        link.classList.toggle('active', !!match);
+      });
+    }
+    syncHeroNav();
 
     /* Nav dell'hero: seleziona il tab corrispondente e scorre ai lavori */
     document.querySelectorAll('.hero-nav a').forEach(function(link){
