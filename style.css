@@ -83,6 +83,14 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 #tabMenuBtn{background:none;border:0;font:inherit;font-size:19px;line-height:1;padding:2px 4px;color:rgba(255,255,255,.85);cursor:pointer;transition:color .16s}
 #tabMenuBtn.open,#tabMenuBtn:hover{color:#E0A24E}
 
+/* Barra mobile agganciata sotto la testata durante lo scroll */
+.tabs-mob.stuck{position:fixed;top:var(--nav-h,57px);left:0;right:0;bottom:auto;z-index:49;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 20px}
+.tabs-mob.stuck .ln{background:var(--line-2)}
+.tabs-mob.stuck #tabMenuBtn{color:var(--ink-dim)}
+.tabs-mob.stuck #tabMenuBtn.open,.tabs-mob.stuck #tabMenuBtn:hover{color:var(--accent)}
+.tabs-mob.stuck #curTab{color:var(--accent)}
+.tabs-mob.stuck + .tabs.open{position:fixed;top:calc(var(--nav-h,57px) + 48px);bottom:auto;left:16px;right:16px;z-index:48}
+
 @media (max-width:860px){
   .tabs-mob{display:flex}
   .tabs.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:16px;right:16px;bottom:56px;z-index:4;background:rgba(15,18,22,.94);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:6px}

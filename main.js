@@ -126,6 +126,31 @@
     }
     syncCur();
 
+    /* Barra mobile: si aggancia sotto la testata quando l'hero esce dallo schermo */
+    var mobBar = document.querySelector('.tabs-mob');
+    var heroEl = document.querySelector('.hero');
+    var siteNav = document.querySelector('nav');
+    if(mobBar && heroEl && siteNav){
+      var onScroll = function(){
+        if(getComputedStyle(mobBar).display === 'none'){ mobBar.classList.remove('stuck'); return; }
+        var navH = siteNav.offsetHeight;
+        document.documentElement.style.setProperty('--nav-h', navH + 'px');
+        var heroBottom = heroEl.getBoundingClientRect().bottom;
+        var wasStuck = mobBar.classList.contains('stuck');
+        var stuck = heroBottom - 50 < navH;
+        if(stuck !== wasStuck){
+          mobBar.classList.toggle('stuck', stuck);
+          if(!stuck && tabsBox.classList.contains('open')){
+            tabsBox.classList.remove('open');
+            if(menuBtn){ menuBtn.setAttribute('aria-expanded','false'); menuBtn.classList.remove('open'); }
+          }
+        }
+      };
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('resize', onScroll, {passive:true});
+      onScroll();
+    }
+
     /* Nav dell'hero: seleziona il tab corrispondente e scorre ai lavori */
     document.querySelectorAll('.hero-nav a').forEach(function(link){
       link.addEventListener('click', function(){
