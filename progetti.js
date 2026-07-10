@@ -22,6 +22,24 @@ window.PROGETTI = [
 
   /* ---------- TEATRO E PERFORMANCE ---------- */
   {
+    id: "iperdark",
+    anno: 2024,
+    cat: "teatro",
+    title: { it: "Iperdark", en: "Iperdark" },
+    meta:  { it: "2024 · Spazio Franco, Palermo", en: "2024 · Spazio Franco, Palermo" },
+    thumb: "media/iperdark/thumb.jpg",
+    page: true
+  },
+  {
+    id: "tripolis",
+    anno: 2019,
+    cat: "teatro",
+    title: { it: "Tripolis", en: "Tripolis" },
+    meta:  { it: "2019 · Frazioni Residue", en: "2019 · Frazioni Residue" },
+    thumb: "media/tripolis/thumb.jpg",
+    page: true
+  },
+  {
     id: "suoni-in-estinzione",
     anno: 2021,
     cat: "teatro",
