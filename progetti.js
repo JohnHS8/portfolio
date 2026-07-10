@@ -43,10 +43,10 @@ window.PROGETTI = [
   },
   {
     id: "apnea",
-    anno: 2024,
+    anno: 2023,
     cat: "ost",
     title: { it: "Apnea", en: "Apnea" },
-    meta:  { it: "2023/2024 · Film documentario d'animazione", en: "2023/2024 · Animated documentary film" },
+    meta:  { it: "2023 · Film documentario d'animazione", en: "2023 · Animated documentary film" },
     thumb: "media/apnea/thumb.jpg",
     page: true
   },
