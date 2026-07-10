@@ -86,7 +86,7 @@
       slides[si].classList.remove('on');
       si = (si + 1) % slides.length;
       slides[si].classList.add('on');
-    }, 8000);
+    }, 13000);
   }
 
   /* ---- Tab categorie (solo home) ---- */
