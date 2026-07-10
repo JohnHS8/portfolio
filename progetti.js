@@ -42,6 +42,15 @@ window.PROGETTI = [
 
   /* ---------- OST E SOUND DESIGN ---------- */
   {
+    id: "en-route",
+    anno: 2024,
+    cat: "ost",
+    title: { it: "En Route", en: "En Route" },
+    meta:  { it: "2024 · Film documentario", en: "2024 · Documentary film" },
+    thumb: "media/en-route/thumb.jpg",
+    page: true
+  },
+  {
     id: "hung-land",
     anno: 2024,
     cat: "ost",
@@ -80,6 +89,15 @@ window.PROGETTI = [
   },
 
   /* ---------- INSTALLAZIONI ---------- */
+  {
+    id: "frequenze-della-memoria",
+    anno: 2022,
+    cat: "install",
+    title: { it: "Le Frequenze della memoria", en: "Le Frequenze della memoria" },
+    meta:  { it: "2022 · Quartiere Brancaccio, Palermo", en: "2022 · Brancaccio district, Palermo" },
+    thumb: "media/frequenze-della-memoria/thumb.jpg",
+    page: true
+  },
   {
     id: "four-seats",
     anno: 2021,
