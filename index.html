@@ -41,7 +41,7 @@
 
 <header class="hero" id="top">
   <div class="hero-slide on" style="background-image:url('media/hero-2.jpg')"></div>
-  <div class="hero-slide" style="background-image:url('media/hero-6.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('media/hero-6.jpg');background-position:center 22%"></div>
   <div class="hero-slide" style="background-image:url('media/hero.jpg')"></div>
   <div class="hero-slide" style="background-image:url('media/hero-3.jpg')"></div>
   <div class="hero-slide" style="background-image:url('media/hero-4.jpg')"></div>
@@ -118,11 +118,15 @@
         <div class="mail-block">
           <h2 class="foot-title" data-it="Scrivimi" data-en="Get in touch">Scrivimi</h2>
           <form class="mail-form" id="mailForm">
+            <label class="mf-label" for="mfEmail" data-it="La tua email" data-en="Your email">La tua email</label>
+            <input type="email" id="mfEmail" name="email" required>
             <label class="mf-label" for="mfSubject" data-it="Oggetto" data-en="Subject">Oggetto</label>
             <input type="text" id="mfSubject" name="subject" required>
             <label class="mf-label" for="mfBody" data-it="Messaggio" data-en="Message">Messaggio</label>
             <textarea id="mfBody" name="body" rows="6" required></textarea>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <button class="mf-send" type="submit" data-it="Invia" data-en="Send">Invia</button>
+            <p class="mf-status" id="mfStatus" hidden></p>
           </form>
         </div>
         <div class="social-block">

@@ -79,14 +79,39 @@
     langBtns.forEach(function(b){ b.addEventListener('click', function(){ setTimeout(paint,0); }); });
   }
 
-  /* ---- Modulo contatti: apre l'app di posta con oggetto e testo ---- */
+  /* ---- Modulo contatti: invio diretto via FormSubmit (senza app di posta) ---- */
   var mailForm = document.getElementById('mailForm');
   if(mailForm){
+    var mfStatus = document.getElementById('mfStatus');
+    var MF_TXT = {
+      sending: { it:'Invio in corso…', en:'Sending…' },
+      ok:      { it:'Messaggio inviato. Grazie!', en:'Message sent. Thank you!' },
+      err:     { it:'Invio non riuscito. Riprova, o scrivi a gio.magaglio@gmail.com', en:'Sending failed. Please try again, or write to gio.magaglio@gmail.com' }
+    };
     mailForm.addEventListener('submit', function(e){
       e.preventDefault();
-      var s = encodeURIComponent(document.getElementById('mfSubject').value || '');
-      var b = encodeURIComponent(document.getElementById('mfBody').value || '');
-      window.location.href = 'mailto:gio.magaglio@gmail.com?subject=' + s + '&body=' + b;
+      var lang = document.documentElement.lang === 'en' ? 'en' : 'it';
+      var btn = mailForm.querySelector('.mf-send');
+      btn.disabled = true;
+      if(mfStatus){ mfStatus.hidden = false; mfStatus.className = 'mf-status'; mfStatus.textContent = MF_TXT.sending[lang]; }
+      fetch('https://formsubmit.co/ajax/gio.magaglio@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json', 'Accept':'application/json' },
+        body: JSON.stringify({
+          email: document.getElementById('mfEmail').value,
+          _subject: document.getElementById('mfSubject').value,
+          message: document.getElementById('mfBody').value,
+          _template: 'table'
+        })
+      }).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function(){
+          if(mfStatus){ mfStatus.textContent = MF_TXT.ok[lang]; mfStatus.classList.add('ok'); }
+          mailForm.reset(); btn.disabled = false;
+        })
+        .catch(function(){
+          if(mfStatus){ mfStatus.textContent = MF_TXT.err[lang]; mfStatus.classList.add('err'); }
+          btn.disabled = false;
+        });
     });
   }
 
