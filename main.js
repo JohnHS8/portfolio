@@ -78,6 +78,17 @@
     langBtns.forEach(function(b){ b.addEventListener('click', function(){ setTimeout(paint,0); }); });
   }
 
+  /* ---- Modulo contatti: apre l'app di posta con oggetto e testo ---- */
+  var mailForm = document.getElementById('mailForm');
+  if(mailForm){
+    mailForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var s = encodeURIComponent(document.getElementById('mfSubject').value || '');
+      var b = encodeURIComponent(document.getElementById('mfBody').value || '');
+      window.location.href = 'mailto:gio.magaglio@gmail.com?subject=' + s + '&body=' + b;
+    });
+  }
+
   /* ---- Slideshow dell'hero (solo home) ---- */
   var slides = document.querySelectorAll('.hero-slide');
   if(slides.length > 1 && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches)){
