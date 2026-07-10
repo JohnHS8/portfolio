@@ -33,6 +33,15 @@ window.PROGETTI = [
 
   /* ---------- OST E SOUND DESIGN ---------- */
   {
+    id: "hung-land",
+    anno: 2024,
+    cat: "ost",
+    title: { it: "Hung Land", en: "Hung Land" },
+    meta:  { it: "2024 · Film documentario", en: "2024 · Documentary film" },
+    thumb: "media/hung-land/thumb.jpg",
+    page: true
+  },
+  {
     id: "apnea",
     anno: 2024,
     cat: "ost",
