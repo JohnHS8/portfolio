@@ -22,6 +22,15 @@ window.PROGETTI = [
 
   /* ---------- TEATRO E PERFORMANCE ---------- */
   {
+    id: "x6",
+    anno: 2026,
+    cat: "teatro",
+    title: { it: "X6", en: "X6" },
+    meta:  { it: "2026 · Live A/V, chitarra esafonica", en: "2026 · Live A/V, hexaphonic guitar" },
+    thumb: "media/x6/thumb.jpg",
+    page: true
+  },
+  {
     id: "rustle",
     anno: 2026,
     cat: "teatro",

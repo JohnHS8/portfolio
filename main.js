@@ -97,14 +97,14 @@
       slides[si].classList.remove('on');
       si = (si + 1) % slides.length;
       slides[si].classList.add('on');
-    }, 13000);
+    }, 18000);
   }
 
   /* ---- Tab categorie (solo home) ---- */
   var tabsBox = document.getElementById('worksTabs');
   if(tabsBox){
     var tabs = tabsBox.querySelectorAll('.tab');
-    var panels = { works: document.getElementById('panel-works'), teaching: document.getElementById('panel-teaching'), bio: document.getElementById('panel-bio') };
+    var panels = { works: document.getElementById('panel-works'), teaching: document.getElementById('panel-teaching'), bio: document.getElementById('panel-bio'), contact: document.getElementById('panel-contact') };
     var menuBtn = document.getElementById('tabMenuBtn');
     var curTab = document.getElementById('curTab');
     function syncCur(){
@@ -125,6 +125,7 @@
         panels.works.hidden = !cat;
         panels.teaching.hidden = panel !== 'teaching';
         panels.bio.hidden = panel !== 'bio';
+        if(panels.contact) panels.contact.hidden = panel !== 'contact';
         if(cat){
           document.querySelectorAll('#worksGrid .wk').forEach(function(wk){
             wk.hidden = (cat !== 'all' && wk.getAttribute('data-cat') !== cat);
@@ -192,8 +193,15 @@
     }
     syncHeroNav();
 
-    /* Nav dell'hero: seleziona il tab corrispondente e scorre ai lavori */
-    document.querySelectorAll('.hero-nav a').forEach(function(link){
+    /* Arrivo da pagina progetto con #contatti: apri il tab Contatti */
+    if(location.hash === '#contatti'){
+      tabs.forEach(function(t){ if(t.getAttribute('data-panel') === 'contact') t.click(); });
+      var worksSec = document.getElementById('works');
+      if(worksSec) worksSec.scrollIntoView();
+    }
+
+    /* Link che attivano un tab (nav hero, voce Contatti in alto) */
+    document.querySelectorAll('a[data-tab-cat], a[data-tab-panel]').forEach(function(link){
       link.addEventListener('click', function(){
         var cat = link.getAttribute('data-tab-cat');
         var panel = link.getAttribute('data-tab-panel');

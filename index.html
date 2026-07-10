@@ -27,7 +27,7 @@
     <a class="brand" href="#top">Giovanni Magaglio</a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="#contatti" data-it="Contatti" data-en="Contact">Contatti</a>
+        <a href="#works" data-tab-panel="contact" data-it="Contatti" data-en="Contact">Contatti</a>
       </div>
       <div class="lang" role="group" aria-label="Lingua / Language">
         <button data-lang="it" aria-pressed="true">IT</button>
@@ -43,6 +43,7 @@
   <div class="hero-slide" style="background-image:url('media/hero.jpg')"></div>
   <div class="hero-slide" style="background-image:url('media/hero-3.jpg')"></div>
   <div class="hero-slide" style="background-image:url('media/hero-4.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('media/hero-5.jpg')"></div>
   <div class="hero-center">
     <h1>Giovanni Magaglio</h1>
     <p class="role" data-it="Compositore, sound designer, artista intermediale." data-en="Composer, sound designer, intermedia artist.">Compositore, sound designer, artista intermediale.</p>
@@ -56,7 +57,8 @@
     <a href="#works" data-tab-cat="install" data-it="Sound art e installazioni" data-en="Sound art &amp; installations">Sound art e installazioni</a><span class="ln" aria-hidden="true"></span>
     <a href="#works" data-tab-cat="ost" data-it="OST e sound design" data-en="OST &amp; sound design">OST e sound design</a><span class="ln" aria-hidden="true"></span>
     <a href="#works" data-tab-panel="teaching" data-it="Didattica" data-en="Teaching">Didattica</a><span class="ln" aria-hidden="true"></span>
-    <a href="#works" data-tab-panel="bio">Bio</a>
+    <a href="#works" data-tab-panel="bio">Bio</a><span class="ln" aria-hidden="true"></span>
+    <a href="#works" data-tab-panel="contact" data-it="Contatti" data-en="Contact">Contatti</a>
   </nav>
   <div class="tabs-mob">
     <button id="tabMenuBtn" aria-expanded="false" aria-controls="worksTabs" aria-label="Sezioni / Sections">☰</button>
@@ -70,6 +72,7 @@
     <button class="tab" data-cat="ost"><span class="t-full" data-it="OST e sound design" data-en="OST &amp; sound design">OST e sound design</span><span class="t-short">OST</span></button>
     <button class="tab" data-panel="teaching"><span class="t-full" data-it="Didattica e ricerca" data-en="Teaching &amp; research">Didattica e ricerca</span><span class="t-short" data-it="Didattica" data-en="Teaching">Didattica</span></button>
     <button class="tab" data-panel="bio">Bio</button>
+    <button class="tab" data-panel="contact" data-it="Contatti" data-en="Contact">Contatti</button>
   </div>
 </header>
 
@@ -108,6 +111,32 @@
       </div>
     </div>
 
+    <div class="tab-panel" id="panel-contact" hidden>
+      <div class="contact-pad">
+        <div class="mail-block">
+          <h2 class="foot-title" data-it="Scrivimi" data-en="Get in touch">Scrivimi</h2>
+          <form class="mail-form" id="mailForm">
+            <label class="mf-label" for="mfSubject" data-it="Oggetto" data-en="Subject">Oggetto</label>
+            <input type="text" id="mfSubject" name="subject" required>
+            <label class="mf-label" for="mfBody" data-it="Messaggio" data-en="Message">Messaggio</label>
+            <textarea id="mfBody" name="body" rows="6" required></textarea>
+            <button class="mf-send" type="submit" data-it="Invia" data-en="Send">Invia</button>
+          </form>
+        </div>
+        <div class="social-block">
+          <h2 class="foot-title">Social</h2>
+          <div class="social-row">
+            <a class="ig-link" href="https://www.instagram.com/john_haller_standing/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a class="ig-link" href="https://www.facebook.com/john.h.standing" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M13.4 21.5v-7.1h2.4l.45-3.1h-2.85V9.3c0-.9.3-1.6 1.7-1.6h1.3V4.9c-.55-.07-1.25-.15-2.05-.15-2.1 0-3.55 1.3-3.55 3.65v2.9H8.4v3.1h2.35v7.1h2.65z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="tab-panel" id="panel-bio" hidden>
       <div class="bio-pad">
           <div class="bio-grid">
@@ -131,22 +160,10 @@
 
 <footer id="contatti">
   <div class="wrap foot-grid">
-    <div class="mail-block">
-      <h2 class="foot-title" data-it="Scrivimi" data-en="Get in touch">Scrivimi</h2>
-      <form class="mail-form" id="mailForm">
-        <label class="mf-label" for="mfSubject" data-it="Oggetto" data-en="Subject">Oggetto</label>
-        <input type="text" id="mfSubject" name="subject" required>
-        <label class="mf-label" for="mfBody" data-it="Messaggio" data-en="Message">Messaggio</label>
-        <textarea id="mfBody" name="body" rows="5" required></textarea>
-        <button class="mf-send" type="submit" data-it="Invia" data-en="Send">Invia</button>
-      </form>
-    </div>
-    <div class="foot-side">
-      <a class="ig-link" href="https://www.instagram.com/john_haller_standing/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <div class="foot-meta">© <span id="year"></span> Giovanni Magaglio · <span data-it="Firenze, IT" data-en="Florence, IT">Firenze, IT</span></div>
-    </div>
+    <a class="ig-link" href="https://www.instagram.com/john_haller_standing/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <div class="foot-meta">© <span id="year"></span> Giovanni Magaglio · <span data-it="Firenze, IT" data-en="Florence, IT">Firenze, IT</span></div>
   </div>
 </footer>
 
