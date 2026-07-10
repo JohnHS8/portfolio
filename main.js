@@ -24,9 +24,10 @@
     try{ localStorage.setItem('gm-lang', lang); }catch(e){}
   }
   langBtns.forEach(function(b){ b.addEventListener('click', function(){ applyLang(b.dataset.lang); }); });
+  /* Lingua predefinita: inglese. L'italiano resta solo se scelto col bottone IT. */
   var savedLang = null;
   try{ savedLang = localStorage.getItem('gm-lang'); }catch(e){}
-  if(savedLang==='en') applyLang('en');
+  if(savedLang !== 'it') applyLang('en');
 
   /* ---- Tema chiaro/scuro (persistente) ---- */
   var themeBtn = document.getElementById('themeBtn');
