@@ -22,6 +22,24 @@ window.PROGETTI = [
 
   /* ---------- TEATRO E PERFORMANCE ---------- */
   {
+    id: "rustle",
+    anno: 2026,
+    cat: "teatro",
+    title: { it: "Rustle", en: "Rustle" },
+    meta:  { it: "2026 · Minus Collettivo", en: "2026 · Minus Collettivo" },
+    thumb: "media/rustle/thumb.jpg",
+    page: true
+  },
+  {
+    id: "caosmosi",
+    anno: 2023,
+    cat: "teatro",
+    title: { it: "Caosmosi", en: "Caosmosi" },
+    meta:  { it: "2023 · Frittelli, Firenze · MUTEK Montréal", en: "2023 · Frittelli, Florence · MUTEK Montréal" },
+    thumb: "media/caosmosi/thumb.jpg",
+    page: true
+  },
+  {
     id: "iperdark",
     anno: 2024,
     cat: "teatro",
