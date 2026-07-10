@@ -78,6 +78,17 @@
     langBtns.forEach(function(b){ b.addEventListener('click', function(){ setTimeout(paint,0); }); });
   }
 
+  /* ---- Slideshow dell'hero (solo home) ---- */
+  var slides = document.querySelectorAll('.hero-slide');
+  if(slides.length > 1 && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches)){
+    var si = 0;
+    setInterval(function(){
+      slides[si].classList.remove('on');
+      si = (si + 1) % slides.length;
+      slides[si].classList.add('on');
+    }, 8000);
+  }
+
   /* ---- Tab categorie (solo home) ---- */
   var tabsBox = document.getElementById('worksTabs');
   if(tabsBox){

@@ -43,7 +43,9 @@ nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:bl
 
 /* ---------- HERO (home) ---------- */
 .hero{position:relative;height:82vh;min-height:480px;background:#2B2F29;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,17,13,.72),rgba(14,17,13,.12) 46%,transparent 70%)}
+.hero-slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease}
+.hero-slide.on{opacity:1}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(14,17,13,.72),rgba(14,17,13,.12) 46%,transparent 70%)}
 .hero-tag{position:absolute;top:16px;right:24px;z-index:2;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .hero-center{position:relative;z-index:2;text-align:center;padding:0 32px;max-width:var(--maxw)}
 .hero h1{font-weight:300;font-size:clamp(1.35rem,2.8vw,2.2rem);line-height:1.15;letter-spacing:.07em;text-transform:uppercase;color:#fff}
