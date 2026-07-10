@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /progetti/_template.html
+
+Sitemap: https://giovannimagaglio.com/sitemap.xml
