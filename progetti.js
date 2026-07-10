@@ -22,6 +22,15 @@ window.PROGETTI = [
 
   /* ---------- TEATRO E PERFORMANCE ---------- */
   {
+    id: "suoni-in-estinzione",
+    anno: 2021,
+    cat: "teatro",
+    title: { it: "Suoni in estinzione", en: "Suoni in estinzione" },
+    meta:  { it: "2021 · Teatro Massimo, Palermo", en: "2021 · Teatro Massimo, Palermo" },
+    thumb: "media/suoni-in-estinzione/thumb.jpg",
+    page: true
+  },
+  {
     id: "semana-humara",
     anno: 2021,
     cat: "teatro",
@@ -39,6 +48,15 @@ window.PROGETTI = [
     title: { it: "Hung Land", en: "Hung Land" },
     meta:  { it: "2024 · Film documentario", en: "2024 · Documentary film" },
     thumb: "media/hung-land/thumb.jpg",
+    page: true
+  },
+  {
+    id: "anima-mundi",
+    anno: 2021,
+    cat: "ost",
+    title: { it: "Anima Mundi", en: "Anima Mundi" },
+    meta:  { it: "2021 · Percorso immersivo, Odd Agency", en: "2021 · Immersive trail, Odd Agency" },
+    thumb: "media/anima-mundi/thumb.jpg",
     page: true
   },
   {
